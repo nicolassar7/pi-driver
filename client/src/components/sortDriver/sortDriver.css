@@ -1,0 +1,80 @@
+.sort{
+    color: white;
+
+    margin: 5px;
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.az button {
+    width:80px;
+    height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+}
+
+.az button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.az button:hover::before{
+    width: 100%;
+    background-color: red;
+}
+
+.az button:active:before {
+    background: #b9b9b9;
+}
+
+.order{
+    margin-top: 20px;
+    width:80px;
+    height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    transition: all 0.5s;
+    z-index: 1;
+}
+.order::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.order:hover::before{
+    width: 100%;
+    background-color: red;
+}
+.order:active:before {
+    background: #b9b9b9;
+}

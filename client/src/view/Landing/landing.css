@@ -1,0 +1,66 @@
+body {
+    background-image: url('../../assets/445769.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing img {
+    margin-top: -100px;
+    max-width: 400px; 
+    height: auto;  
+    margin: 0 auto;
+}
+
+.landing button {
+    background: red;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    color: white;
+}
+
+.landing button:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.landing span{
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.landing button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: white;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.landing button:hover{
+    color: black;
+}
+.landing button:hover::before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+  

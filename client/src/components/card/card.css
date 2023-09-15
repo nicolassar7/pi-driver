@@ -1,0 +1,88 @@
+.card {
+    width: 15em;
+    height: 19.5em;
+    background: #171717;
+    transition: 1s ease-in-out;
+    clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    position: relative;
+}
+
+.card img {
+    width: 6.4em;
+    height: 6.8em;
+    background: white;
+    border-radius: 15px;
+    border: 3px solid white;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    font-family:sans-serif;
+}
+
+.text {
+    margin-top: -10px;
+    font-size: 12px;
+    text-align: center; 
+    margin: 10px; 
+    color: white;
+    font-family:sans-serif;
+    font-weight: bold;
+}
+
+.card button {
+    background: white;
+    border: none;
+    padding: 5px;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+    color: black;
+}
+
+.card button:hover {
+    background: white;
+    color: red;
+    cursor: pointer;
+}
+
+.card span{
+    display: inline-block;
+    transform: skew(21deg);
+}
+
+.card button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: red;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+}
+.card button:hover{
+    color: white;
+}
+
+.card button:hover::before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
